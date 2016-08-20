@@ -14,4 +14,4 @@ HTML/CSS exercises
 
 - Use http://fontawesome.io for any icons you need even if they aren't an exact match
 - Both sites use paid fonts, so for the sans-serif font just use arial, and in the contact form exercise the italic font is Georgia
-- Use Sass normal CSS for one of the exercises, and Sass for the other
+- Use normal CSS for one of the exercises, and Sass for the other
