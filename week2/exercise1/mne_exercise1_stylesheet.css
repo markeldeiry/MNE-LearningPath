@@ -1,0 +1,61 @@
+.tabs {
+    /*make these inline, black with white text, gray above the black bar*/
+    background: #000000;
+    color: #ffffff;
+    padding: 1px 0 1px 0;
+    border-top-color: #dddddd;
+    font-size: 13px;
+    font-family: Arial, sans-serif;s
+}
+
+li {
+    /*underline when hovering on one option, auto open the dropdown when hovering*/
+    text-decoration: no-underline;
+    color: #ffffff;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+li a:hover {
+    text-decoration: underline;
+}
+
+h1, h3 {
+    color: #666666;
+    /*text-align: center;*/
+}
+
+h1 {
+    font-family: "Arial Narrow", sans-serif;
+    font-size: 30px;
+}
+
+h3 {
+    font-family: serif;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.bottom_bar {
+    color: #666666;
+}
+
+h5 {
+    font-style: italic;
+    display: inline;
+}
+
+.bottom_bar a {
+    color: #999999;
+    font-family: sans-serif;
+    text-decoration: underline;
+    display: inline;
+}
+
+.top {
+    background: #dddddd;
+}
