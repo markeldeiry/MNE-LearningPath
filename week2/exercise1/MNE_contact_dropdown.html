@@ -4,34 +4,35 @@
 <!doctype html>
 <html>
 	<head>
-	<!--put the CSS tags here.-->
 		<link rel="stylesheet" type="text/css" href="mne_exercise1_stylesheet.css">
 	</head>
+	<div class="top">
 	<header>
-		<div class="tabs">
-			<ul>
+		<div class="nav-bar">
+			<ul class="nav">
 				<li><a href="#">ABOUT</a></li>
-				<li>SERVICES
-					<!--<ul type="dropdown-menu">-->
-						<!--<li>BRANDING</li>-->
-						<!--<li>WEB DESIGN</li>-->
-						<!--<li>WEB DEV</li>-->
-						<!--<li>MARKETING</li>-->
-						<!--<li>VIDEO</li>-->
-					<!--</ul>-->
+				<li><a href="#">SERVICES</a>
+					<ul type="dropdown-menu">
+						<li>BRANDING</li>
+						<li>WEB DESIGN</li>
+						<li>WEB DEV</li>
+						<li>MARKETING</li>
+						<li>VIDEO</li>
+					</ul>
 				</li>
 
 				<li><a href="#">WORK</a></li>
 				<li><icon>insert image</icon></li>
 				<li><a href="#">CONTACT</a></li>
 				<li><a href="#">BLOG</a></li>
-				<li><input type="search" placeholder="search">add icon</li>
+				<li><input class="search" type="search" placeholder="SEARCH">add icon</li>
 			</ul>
+			<div class="clear"></div>
 		</div>
 	</header>
 
 	<body>
-		<div class="top">
+
 			<h1 align="center">KNOCK-KNOCK</h1>
 			<h3 align="center">Get in touch. We'd love to meet you.
 				<p>Or take it slow, drop us a line below.</p>
@@ -39,14 +40,16 @@
 		</div>
 		<img src="paperairplane.jpg" alt="insert paper airplane">
 		<!-- insert text and textarea fields -->
-		<ul>
-			<input type="text" placeholder="First Name*" required="true"></input>
-			<input type="text" placeholder="Last Name*" required="true"></input>
-			<input type="text" placeholder="Email Address*" required="true"></input>
-			<input type="text" placeholder="Describe Yourself*" required="true"></input>
-			<input type="text" placeholder="Phone Number"></input>
-		</ul>
-		<textarea placeholder="Anything else we should know?"></textarea>
+		<div class="form-inputs">
+			<ul>
+				<input type="text" placeholder="First Name*" required="true"></input>
+				<input type="text" placeholder="Last Name*" required="true"></input>
+				<input type="text" placeholder="Email Address*" required="true"></input>
+				<input type="text" placeholder="Describe Yourself*" required="true"></input>
+				<input type="text" placeholder="Phone Number"></input>
+			</ul>
+			<textarea placeholder="Anything else we should know?"></textarea>
+		</div>
 	</body>
 
 	<footer class="bottom_bar">

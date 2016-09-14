@@ -1,0 +1,48 @@
+body {
+    background: url("exercise1_body_background.png") repeat-x;
+}
+
+#container {
+    width: 960px;
+    margin: 0 auto;
+    background: none;
+}
+
+nav {
+    background: red;
+    height: 20px;
+    border-top: 100px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul ul li {
+    display: block;
+}
+
+.form-left {
+    background: blue;
+    height: 300px;
+    float: left;
+    width: 400px;
+    margin-right: 20px;
+}
+
+.form-right {
+    background: pink;
+    height: 300px;
+    float: left;
+    width: 400px;
+}
+
+footer {
+    background: green;
+    height: 20px;
+    clear: both;
+}

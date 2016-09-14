@@ -1,35 +1,76 @@
-.tabs {
+html, body, header, footer, h1, h3, .nav-bar, li, .top, .bottom-bar, button, input, a, .nav {
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+.nav-bar {
     /*make these inline, black with white text, gray above the black bar*/
-    background: #000000;
+    background: #222222;
     color: #ffffff;
-    padding: 1px 0 1px 0;
-    border-top-color: #dddddd;
-    font-size: 13px;
-    font-family: Arial, sans-serif;s
+}
+
+.nav {
+    padding: 8px 0 8px 0;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    margin-left: 120px;
+    list-style: none;
+}
+
+.top {
+    background: #d0d0d0;
+    padding-top: 9px;
+    padding-bottom: 50px;
 }
 
 li {
     /*underline when hovering on one option, auto open the dropdown when hovering*/
-    text-decoration: no-underline;
+    text-decoration: none;
     color: #ffffff;
-    display: inline;
-    padding: 0 20px 0 20px;
+    float: left;
+    padding: 0 40px 0 20px;
+}
+
+ul ul li {
+    float: none;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
 }
 
 li a {
     text-decoration: none;
     color: #ffffff;
 }
-li a:hover {
-    text-decoration: underline;
+
+li:hover {
+    border-bottom: 1.5pt solid #ffffff;
+    padding-bottom: 3pt;
+}
+
+ul ul li:hover {
+    border-bottom: none;
+}
+
+ul ul {
+    /*display: none;*/
+    position: absolute;
+    margin: 10px 0 0 0;
+    padding: 0;
+    background-color: black;
+}
+
+li:hover ul {
+    display: block;
 }
 
 h1, h3 {
     color: #666666;
-    /*text-align: center;*/
 }
 
 h1 {
+    padding-top: 20px;
     font-family: "Arial Narrow", sans-serif;
     font-size: 30px;
 }
@@ -40,22 +81,49 @@ h3 {
     font-style: italic;
 }
 
-.bottom_bar {
-    color: #666666;
-}
-
-h5 {
-    font-style: italic;
-    display: inline;
-}
-
 .bottom_bar a {
     color: #999999;
     font-family: sans-serif;
-    text-decoration: underline;
-    display: inline;
+    /*display: inline;*/
+    font-size: 12px;
 }
 
-.top {
-    background: #dddddd;
+.bottom_bar li {
+    color: #666666;
+    border-bottom: 1.5pt solid #666666;
+    padding-bottom: 1pt;
+    list-style: none;
+}
+
+button {
+    /*display: inline;*/
+}
+
+input {
+    display: block;
+    font-size: 12px;
+    font-style: italic;
+    font-family: serif;
+    padding: 10px;
+    border: 4px solid #ffffff;
+    background-color: #dddddd;
+}
+
+.search {
+    height: 13px;
+    display: inline;
+    border: none;
+    background-color: #111111;
+    font-style: normal;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+}
+
+textarea {
+    display: inline;
+    size: 500px 50px;
+}
+
+.clear {
+    clear: both;
 }
