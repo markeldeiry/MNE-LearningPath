@@ -57,7 +57,7 @@ nav ul ul li:hover {
     background: blue;
     height: 300px;
     float: left;
-    width: 32%;
+    width: 33%;
 }
 
 .form-left ul {
@@ -81,17 +81,17 @@ input, textarea {
     height: 30px;
 }
 
-.form-center {
-    height: 300px;
-    float: left;
-    width: 2%;
-}
+/*.form-center {*/
+    /*height: 300px;*/
+    /*float: left;*/
+    /*width: 2%;*/
+/*}*/
 
 .form-right {
     background: pink;
     height: 300px;
     float: left;
-    width: 66%;
+    width: 67%;
 }
 
 textarea {
@@ -110,13 +110,12 @@ footer h3 {
     font-style: italic;
     font-family: serif;
     font-size: 10pt;
-    padding: 10px 50px;
+    padding: 10px;
     display: inline;
 }
 
 footer a {
     color: gray;
-    padding: 10px;
 }
 
 footer ul {
@@ -126,5 +125,13 @@ footer ul {
 
 footer ul li {
     display: inline;
+    border-bottom: solid;
+    padding: 10px 20px 0 20px;
 }
 
+button {
+    border-radius: 50%;
+    padding: 10px 20px;
+    background-color: rebeccapurple;
+    color: lightgray;
+}
