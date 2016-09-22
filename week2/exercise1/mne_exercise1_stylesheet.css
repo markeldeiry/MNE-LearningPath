@@ -51,10 +51,11 @@ li:hover {
 
 ul ul li:hover {
     border-bottom: none;
+    display: block;
 }
 
 ul ul {
-    /*display: none;*/
+    display: none;
     position: absolute;
     margin: 10px 0 0 0;
     padding: 0;

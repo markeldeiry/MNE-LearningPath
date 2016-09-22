@@ -2,30 +2,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>MNE - Ex. 1</title>
     <link rel="stylesheet" type="text/css" href="mne_stylesheet_restart.css">
 </head>
 <body>
 
-<div id="container">
-    <nav>
-        <ul>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">SERVICES</a>
-                <ul type="dropdown-menu">
-                    <li>BRANDING</li>
-                    <li>WEB DESIGN</li>
-                    <li>WEB DEV</li>
-                    <li>MARKETING</li>
-                    <li>VIDEO</li>
-        </ul>
-    </nav>
+    <div id="container">
+        <nav>
+            <ul>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">SERVICES</a>
+                    <ul type="dropdown-menu">
+                        <li>BRANDING</li>
+                        <li>WEB DESIGN</li>
+                        <li>WEB DEV</li>
+                        <li>MARKETING</li>
+                        <li>VIDEO</li>
+                    </ul>
+                <li><a href="#">WORK</a></li>
+                <!--<li><icon>insert image</icon></li>-->
+                <li><a href="#">CONTACT</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><input class="search" type="search" placeholder="SEARCH">add icon</li>
+            </ul>
+        </nav>
 
-    <div class="form-left"></div>
-    <div class="form-right"></div>
+        <div class="top-bar">
+            <h1 align="center">KNOCK-KNOCK</h1>
+            <h3 align="center">Get in touch. We'd love to meet you.
+                <p>Or take it slow, drop us a line below.</p>
+            </h3>
+        </div>
+        <div class="form-left">
+            <ul>
+                <input type="text" placeholder="First Name*" required="true"></input>
+                <input type="text" placeholder="Last Name*" required="true"></input>
+                <input type="text" placeholder="Email Address*" required="true"></input>
+                <input type="text" placeholder="Describe Yourself*" required="true"></input>
+                <input type="text" placeholder="Phone Number"></input>
+            </ul>
+        </div>
+        <div class="form-center"></div>
+        <div class="form-right">
+            <textarea placeholder="Anything else we should know?"></textarea>
+        </div>
 
-    <footer></footer>
-</div>
+        <footer>
+            <h3>Which services are you interested in?</h3>
+            <ul>
+                <li><a href="#">IDENTITY</a></li>
+                <li><a href="#">MARKETING</a></li>
+                <li><a href="#">UI/UX</a></li>
+                <li><a href="#">WEB</a></li>
+                <li><a href="#">VIDEO</a></li>
+            </ul>
+            <button type="submit">SEND IT</button>
+        </footer>
+    </div>
 
 </body>
 </html>
