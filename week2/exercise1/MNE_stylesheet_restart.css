@@ -142,3 +142,10 @@ button {
     background-color: rebeccapurple;
     color: lightgray;
 }
+
+img {
+    height: 50px;
+    width: 50px;
+    margin: 30px 440px;
+    border-radius: 50%;
+}
