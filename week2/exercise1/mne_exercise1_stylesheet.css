@@ -49,11 +49,6 @@ li:hover {
     padding-bottom: 3pt;
 }
 
-ul ul li:hover {
-    border-bottom: none;
-    display: block;
-}
-
 ul ul {
     display: none;
     position: absolute;

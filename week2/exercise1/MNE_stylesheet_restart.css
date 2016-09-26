@@ -39,6 +39,7 @@ nav ul ul li {
 
 nav ul ul li:hover {
     display: block;
+    padding: 0;
 }
 
 .top-bar {
@@ -56,12 +57,11 @@ nav ul ul li:hover {
     background: blue;
     height: 300px;
     float: left;
-    width: 32%;
+    width: 33%;
 }
 
 .form-left ul {
-    width: 90%;
-    margin: 20px 0;
+    width: 80%;
 }
 
 input, textarea {
@@ -75,33 +75,34 @@ input, textarea {
     width: 90%;
 }
 
-input {
-    /*margin: 5px;*/
-}
-
 .search {
-    /*float: right;*/
     display: inline;
     width: auto;
     height: 30px;
+    font-family: sans-serif;
+    font-style: normal;
+    font-size: 8pt;
+    color: #000;
+    background-color: black;
+    border: none;
+    border-radius: 50%;
 }
 
-.form-center {
-    height: 300px;
-    float: left;
-    width: 2%;
-}
+/*.form-center {*/
+    /*height: 300px;*/
+    /*float: left;*/
+    /*width: 2%;*/
+/*}*/
 
 .form-right {
     background: pink;
     height: 300px;
     float: left;
-    width: 66%;
+    width: 67%;
 }
 
 textarea {
     height: 250px;
-    width: 90%;
     margin: 10px auto;
 }
 
@@ -116,6 +117,8 @@ footer h3 {
     font-style: italic;
     font-family: serif;
     font-size: 10pt;
+    padding: 10px;
+    display: inline;
 }
 
 footer a {
@@ -125,4 +128,24 @@ footer a {
 footer ul {
     list-style: none;
     display: inline;
+}
+
+footer ul li {
+    display: inline;
+    border-bottom: solid;
+    padding: 10px 20px 0 20px;
+}
+
+button {
+    border-radius: 50%;
+    padding: 10px 20px;
+    background-color: rebeccapurple;
+    color: lightgray;
+}
+
+img {
+    height: 50px;
+    width: 50px;
+    margin: 30px 440px;
+    border-radius: 50%;
 }
