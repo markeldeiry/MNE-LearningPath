@@ -1,6 +1,30 @@
 # Learning Path
 
-## Week 1
+Skills needed for associate software engineer
+
+- Computer science basics
+  - How does the web work (browsers, servers, DNS, etc.)
+  - How various hosting platforms operate
+  - Programming fundamentals (variables, conditionals, loops, functions, etc.)
+  - Data structures
+  - Basic algorithms and performance
+  - Object oriented and functional programming basics
+  - Design patterns including MVC
+- HTML
+- CSS and preprocessors like Sass
+- JavaScript and ES6
+- jQuery (with a focus on asynchronous topics)
+- React basics
+- Ruby
+- Ruby on Rails
+- TDD
+- Relational database theory and design
+- SQL
+- Basic understanding of NoSQL concepts
+- Version control using GIT
+
+
+## Week 1 - 8/22
 
 HTML/CSS Courses
 
@@ -9,7 +33,7 @@ HTML/CSS Courses
 - CSS Cross-Country
 - Assembling Sass
 
-## Week 2
+## Week 2 - 8/29
 
 HTML/CSS exercises
 
@@ -17,7 +41,7 @@ HTML/CSS exercises
 - Both sites use paid fonts, so for the sans-serif font just use arial, and in the contact form exercise the italic font is Georgia
 - Use normal CSS for one of the exercises, and Sass for the other
 
-## Week 3
+## Week 3 - 9/5
 
 JavaScript/jQuery Courses
 
@@ -25,12 +49,67 @@ JavaScript/jQuery Courses
 - JavaScript Road Trip Part 3
 - JavaScript Best Practices
 - Try jQuery
-- jQuery: The Return Flight
 
-## Week 4
+## Week 4 - 9/12
 
-JavaScript/jQuery Exercises
+JavaScript Exercises
 
 - Memory game
 - Rock paper scissors game
-- Task manager project
+- Basic jQuery exercises
+
+## Week 5 - 9/19
+
+jQuery and Testing
+
+- jQuery: The Return Flight
+- [need to find content for testing JS]
+
+## Week 6 - 10/3
+
+jQuery Exercises
+
+- Add tests to prior JS game exercise
+- Task manager project with tests
+
+## Week 7 - 10/10
+
+Databases and SQL
+
+## Week 8 - 10/17
+
+Ruby on Rails and Testing
+
+## Week 9 - 10/24
+
+Ruby on Rails Project
+
+## Week 10 - 10/31
+
+API development using Ruby on Rails
+
+## Week 11 - 11/7
+
+API Project using Ruby on Rails
+
+## Week 13 - 11/14
+
+Advanced JavaScript and ES6
+
+## Week 14 - 11/21
+
+React
+
+## Week 15 - 11/29
+
+React Project
+
+- Task manager react project
+
+## Week 16 - 12/5
+
+Node.js and Websockets
+
+## Week 17 and 18 - 12/12, 12/19
+
+Final Project TBD
