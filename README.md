@@ -86,7 +86,7 @@ Ruby on Rails Project
 
 ## Week 10 - 10/31
 
-API development using Ruby on Rails
+API Development using Ruby on Rails
 
 ## Week 11 - 11/7
 
