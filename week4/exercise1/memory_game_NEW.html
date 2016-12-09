@@ -1,0 +1,122 @@
+<html>
+<head>
+    <title>Memory Game</title>
+    <style>
+
+        li {
+            list-style: none;
+            float: left;
+        }
+
+        ul {
+            width: 450px;
+            margin: 0 auto 0 auto;
+
+        }
+
+        button.flipped {
+            color: black;
+        }
+
+        button.matched {
+            color: green;
+        }
+
+        button.unmatched {
+            color: white;
+        }
+
+        button {
+            width: 100px;
+            border: 1px black solid;
+            margin: 2px;
+            list-style: none;
+            float: left;
+            text-align: center;
+            padding: 50px 0px;
+            color: white;
+            background: white;
+        }
+
+    </style>
+    <script type="text/javascript">
+        window.addEventListener('load', game);
+        function game() {
+
+            var elements = document.getElementsByTagName('button'),
+                    firstCardText = false,
+                    secondCardText = false,
+                    firstCard = false,
+                    secondCard = false;
+
+            for (var i=0;i<elements.length;i++) {
+
+                elements[i].addEventListener('click', function(e) {
+                    e.target.classList.add('flipped');
+
+                    if (!firstCardText) {
+                        firstCardText = e.target.innerText;
+                        firstCard = e.target;
+                        e.target.disabled = true;
+                    }else if (!secondCardText) {
+                        secondCardText = e.target.innerText;
+                        secondCard = e.target;
+                        e.target.disabled = true;
+                    }
+
+                    console.log(firstCardText, secondCardText);
+
+                    if (firstCardText !== false && secondCardText !== false) {
+
+                        if (firstCardText === secondCardText) {
+                            //we have a match
+                            //TODO: prevent clicking a matched card
+                            firstCardText = false;
+                            secondCardText = false;
+                            firstCard = false;
+                            secondCard = false;
+//                            var elementsFlipped1 = [firstCard, secondCard];
+//                            for (var i = 0; i < elementsFlipped1.length; i++) {
+//                                elementsFlipped1[i].color = 'green';
+//                            }
+                            console.log('match');
+                        }else {
+                            //we do NOT have a match
+                            console.log('NO match');
+                            var elementsFlipped2 = [firstCard, secondCard];
+                            window.setTimeout(function () {
+                                for (var i = 0; i < elementsFlipped2.length; i++) {
+                                    elementsFlipped2[i].classList.toggle('flipped');
+                                    elementsFlipped2[i].disabled = false;
+                                }
+                            },1500);
+                            firstCardText = false;
+                            secondCardText = false;
+                            firstCard = false;
+                            secondCard = false;
+                        }
+                    }
+
+                });
+
+            }
+        }
+    </script>
+</head>
+<body>
+    <ul>
+        <li><button>red</button></li>
+        <li><button>orange</button></li>
+        <li><button>yellow</button></li>
+        <li><button>green</button></li>
+        <li><button>blue</button></li>
+        <li><button>purple</button></li>
+        <li><button>red</button></li>
+        <li><button>orange</button></li>
+        <li><button>yellow</button></li>
+        <li><button>green</button></li>
+        <li><button>blue</button></li>
+        <li><button>purple</button></li>
+    </ul>
+</body>
+</html>
