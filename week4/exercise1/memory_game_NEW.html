@@ -53,6 +53,10 @@
                 elements[i].addEventListener('click', function(e) {
                     e.target.classList.add('flipped');
                     console.log(incrementCounter());
+                    if (counter === elements.length*5) {
+                        alert("You've made "+counter+" guesses on "+elements.length+" cards and still have not won. Refresh the page and keep trying to improve your memory!");
+                        elements.disabled = true;
+                    }
 
 
                     if (!firstCardText) {
@@ -84,9 +88,7 @@
 
 
                             if (matchedCount.length == elements.length) {
-                                if (e.target.className === 'flipped matched') {
-                                    alert("YOU WIN IN "+counter+" MOVES!")
-                                }
+                                alert("YOU WIN IN "+counter+" MOVES!")
                             }
 
 
