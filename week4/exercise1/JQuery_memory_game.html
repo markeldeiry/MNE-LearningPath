@@ -1,141 +1,61 @@
 <html>
-<head>
-    <title>Memory Game</title>
-    <style>
+    <head>
+        <title>Memory Game</title>
+        <style>
 
-        li {
-            list-style: none;
-            float: left;
-        }
+            li {
+                list-style: none;
+                float: left;
+            }
 
-        ul {
-            width: 450px;
-            margin: 0 auto 0 auto;
-
-        }
-
-        button.flipped {
-            color: black;
-        }
-
-        button.matched {
-            color: green;
-            font-weight: bold;
-        }
-
-        button {
-            width: 100px;
-            border: 1px black solid;
-            margin: 2px;
-            list-style: none;
-            float: left;
-            text-align: center;
-            padding: 50px 0px;
-            color: white;
-            background: white;
-        }
-
-    </style>
-    <script type="text/javascript">
-        window.addEventListener('load', game);
-        function game() {
-            var elements = document.getElementsByTagName('button'),
-                    firstCardText = false,
-                    secondCardText = false,
-                    firstCard = false,
-                    secondCard = false,
-                    matchedCount = document.getElementsByClassName('matched'),
-                    counter = 0;
-
-            for (var i=0;i<elements.length;i++) {
-
-
-                elements[i].addEventListener('click', function(e) {
-                    e.target.classList.add('flipped');
-                    console.log(incrementCounter());
-                    if (counter === elements.length*5) {
-                        alert("You've made "+counter+" guesses on "+elements.length+" cards and still have not won. Refresh the page and keep trying to improve your memory!");
-                        elements.disabled = true;
-                    }
-
-
-                    if (!firstCardText) {
-                        firstCardText = e.target.innerText;
-                        firstCard = e.target;
-                        e.target.disabled = true;
-                    }else if (!secondCardText) {
-                        secondCardText = e.target.innerText;
-                        secondCard = e.target;
-                        e.target.disabled = true;
-                    }
-
-                    console.log(firstCardText, secondCardText);
-
-                    if (firstCardText !== false && secondCardText !== false) {
-
-                        if (firstCardText === secondCardText) {
-                            //we have a match
-                            //TODO: prevent clicking a matched card
-                            console.log('match');
-                            var elementsMatched = [firstCard, secondCard];
-                            firstCardText = false;
-                            secondCardText = false;
-                            firstCard = false;
-                            secondCard = false;
-                            for (var i = 0; i < elementsMatched.length; i++) {
-                                elementsMatched[i].classList.toggle('matched');
-                            }
-
-
-                            if (matchedCount.length == elements.length) {
-                                alert("YOU WIN IN "+counter+" MOVES!")
-                            }
-
-
-                        }else {
-                            //we do NOT have a match
-                            console.log('NO match');
-                            var elementsFlipped = [firstCard, secondCard];
-                            window.setTimeout(function () {
-                                for (var i = 0; i < elementsFlipped.length; i++) {
-                                    elementsFlipped[i].classList.toggle('flipped');
-                                    elementsFlipped[i].disabled = false;
-                                }
-                            },1500);
-                            firstCardText = false;
-                            secondCardText = false;
-                            firstCard = false;
-                            secondCard = false;
-                        }
-                    }
-
-                });
+            ul {
+                width: 450px;
+                margin: 0 auto 0 auto;
 
             }
 
+            .flipped {
+                color: black;
+            }
 
-            var incrementCounter = function(e){
-                counter += 1;
-                return counter;
-            };
+            .blank {
+                color: white;
+            }
 
-        }
-    </script>
-</head>
-<body>
-<ul>
-    <li><button>red</button></li>
-    <li><button>orange</button></li>
-    <li><button>yellow</button></li>
-    <li><button>green</button></li>
-    <li><button>blue</button></li>
-    <li><button>purple</button></li>
-    <li><button>red</button></li>
-    <li><button>orange</button></li>
-    <li><button>yellow</button></li>
-    <li><button>green</button></li>
-    <li><button>blue</button></li>
-    <li><button>purple</button></li>
-</ul>
-</body>
+            .matched {
+                color: green;
+                font-weight: bold;
+            }
+
+            button {
+                width: 100px;
+                border: 1px black solid;
+                margin: 2px;
+                list-style: none;
+                float: left;
+                text-align: center;
+                padding: 50px 0px;
+                background: white;
+            }
+
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="JQ_app.js"></script>
+    </head>
+    <body>
+        <ul>
+            <button class="blank">red</button>
+            <button class="blank">orange</button>
+            <button class="blank">yellow</button>
+            <button class="blank">green</button>
+            <button class="blank">blue</button>
+            <button class="blank">purple</button>
+            <button class="blank">red</button>
+            <button class="blank">orange</button>
+            <button class="blank">yellow</button>
+            <button class="blank">green</button>
+            <button class="blank">blue</button>
+            <button class="blank">purple</button>
+        </ul>
+    </body>
 </html>
