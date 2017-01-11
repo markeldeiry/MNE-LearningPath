@@ -60,17 +60,17 @@ JavaScript Exercises
 
 ## Week 5 - 9/19
 
-jQuery and Testing
+jQuery and Ajax
 
 - jQuery: The Return Flight
-- [need to find content for testing JS]
+- Task manager project
 
 ## Week 6 - 10/3
 
-jQuery Exercises
+Testing JavaScript
 
 - Add tests to prior JS game exercise
-- Task manager project with tests
+- Add tests to task manager project
 
 ## Week 7 - 10/10
 
