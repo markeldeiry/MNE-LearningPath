@@ -2,7 +2,7 @@
 
 Create a task manager app using jQuery and the existing server written in Node.
 
-To start the server `node server.js` from within /task_manager_server, the routes are also defined in server.js
+To start the server run `node server.js` from within /task_manager_server, the routes are also defined in server.js
 
 ## Exercises
 
