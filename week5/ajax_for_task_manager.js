@@ -66,6 +66,17 @@ var makeNewTask = {
     }
 };
 
+var markAsComplete = {
+    mac: function () {
+        $(document).on('click', function (e) {
+            e.preventDefault();
+            if (e.target.id === "isTask") {
+                $(e.target).toggleClass("done")
+            }
+        })
+    }
+};
+
 // var removeCompletedTasks = {
 //     rct: function () {
 //         $('#removeCompleted').on('submit', function (e) {
@@ -87,7 +98,8 @@ $(function() {
         categories.fetchCategories(),
         tasks.fetchTasks(),
         makeNewCategory.mnc(),
-        makeNewTask.mnt()
+        makeNewTask.mnt(),
+        markAsComplete.mac()
     ).then(function (categoryResult, taskResult) {
         console.log(categoryResult);
         categoryResult[0].forEach(function (category) {
