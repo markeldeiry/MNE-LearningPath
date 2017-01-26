@@ -14,35 +14,90 @@ var tasks = {
 };
 
 var makeNewCategory = {
-    $('#newCategoryButton').on('submit', function (e) {
-        event.preventDefault();
-        var ncb = $(this);
-        $.ajax('http://localhost:3000/categories', {
-            type: 'POST',
-            contentType: 'application/json',
-            dataType: 'json',
-            success: function (result) {
-                form.remove();
-            }
-        })
-    });
+    mnc: function () {
+        $('#newCategoryForm').on('submit', function (e) {
+            e.preventDefault();
+
+            var params = {
+                name: $('#inputCategory').val()
+            };
+
+            $.ajax({
+                type: 'POST',
+                contentType: 'application/json',
+                dataType: 'json',
+                data: JSON.stringify(params),
+                url: "http://localhost:3000/categories",
+                success: function (response) {
+                    console.log(categories);
+                    $('.categories').append('<li>'+response.name+'<ul data-category-id="'+response.id+'"></ul></li>');
+                    $('#categoryList').append('<option value="'+response.id+'">'+response.name+'</option>');
+                }
+            });
+        });
+    }
+
 };
 
+var makeNewTask = {
+    mnt: function () {
+        $('#newTaskForm').on('submit', function (e) {
+            e.preventDefault();
+
+            var params = {
+                name: $('#inputTask').val(),
+                category: $('#categoryList').val()
+            };
+
+
+
+            $.ajax({
+                type: 'POST',
+                contentType: 'application/json',
+                dataType: 'json',
+                data: JSON.stringify(params),
+                url: "http://localhost:3000/tasks",
+                success: function (response) {
+                    $('ul[data-category-id="'+response.category+'"]').append('<li>'+response.name+'</li>');
+
+                }
+            })
+        })
+    }
+};
+
+// var removeCompletedTasks = {
+//     rct: function () {
+//         $('#removeCompleted').on('submit', function (e) {
+//             e.preventDefault();
+//             $('ul[data-category-id="'+task.category+'"] className=".done"').remove('<li>'+task.name+'</li>');
+//         })
+//     }
+// };
+
 $(function() {
+    // $(document).on('click', function (e) {
+    //     e.preventDefault();
+    //     if (e.target.id === "isTask") {
+    //         $(e.target).toggleClass("done")
+    //     }
+    // });
+
     $.when(
         categories.fetchCategories(),
         tasks.fetchTasks(),
-        makeNewCategory()
+        makeNewCategory.mnc(),
+        makeNewTask.mnt()
     ).then(function (categoryResult, taskResult) {
         console.log(categoryResult);
         categoryResult[0].forEach(function (category) {
             console.log(category);
             $('.categories').append('<li>'+category.name+'<ul data-category-id="'+category.id+'"></ul></li>');
-            $('#categoryList').append('<option>'+category.name+'</option>');
+            $('#categoryList').append('<option value="'+category.id+'">'+category.name+'</option>');
         });
 
         taskResult[0].forEach(function(task) {
-            $('ul[data-category-id="'+task.category+'"]').append('<li>'+task.name+'</li>');
+            $('ul[data-category-id="'+task.category+'"]').append('<li id="isTask">'+task.name+'</li>');
         });
     });
 });
