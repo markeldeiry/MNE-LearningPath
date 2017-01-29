@@ -32,6 +32,7 @@ var makeNewCategory = {
                     console.log(categories);
                     $('.categories').append('<li>'+response.name+'<ul data-category-id="'+response.id+'"></ul></li>');
                     $('#categoryList').append('<option value="'+response.id+'">'+response.name+'</option>');
+                    $('input[type=text], textarea').val('');
                 }
             });
         });
@@ -59,7 +60,7 @@ var makeNewTask = {
                 url: "http://localhost:3000/tasks",
                 success: function (response) {
                     $('ul[data-category-id="'+response.category+'"]').append('<li>'+response.name+'</li>');
-
+                    $('input[type=text], textarea').val('');
                 }
             })
         })
@@ -71,7 +72,7 @@ var markAsComplete = {
         $(document).on('click', function (e) {
             e.preventDefault();
             if (e.target.id === "isTask") {
-                $(e.target).toggleClass("done")
+                $(e.target).toggleClass("completedTask")
             }
         })
     }
@@ -81,25 +82,23 @@ var markAsComplete = {
 //     rct: function () {
 //         $('#removeCompleted').on('submit', function (e) {
 //             e.preventDefault();
-//             $('ul[data-category-id="'+task.category+'"] className=".done"').remove('<li>'+task.name+'</li>');
+//             $('ul[data-category-id="'+task.category+'"] className=".completedTask"').remove('<li>'+task.name+'</li>');
 //         })
 //     }
 // };
 
 $(function() {
-    // $(document).on('click', function (e) {
-    //     e.preventDefault();
-    //     if (e.target.id === "isTask") {
-    //         $(e.target).toggleClass("done")
-    //     }
+    // $(document).ready (function () {
+    //     markAsComplete.mac()
     // });
 
     $.when(
         categories.fetchCategories(),
         tasks.fetchTasks(),
         makeNewCategory.mnc(),
-        makeNewTask.mnt(),
-        markAsComplete.mac()
+        makeNewTask.mnt()
+        // markAsComplete.mac()
+        // removeCompletedTasks.rct()
     ).then(function (categoryResult, taskResult) {
         console.log(categoryResult);
         categoryResult[0].forEach(function (category) {
