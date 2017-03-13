@@ -6,4 +6,5 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+Category.create([{ name: 'Work' }, { name: 'Home' }])
 Task.create([{ name: 'task 1', category_id: 1 }, { name: 'task 2', category_id: 2 }])

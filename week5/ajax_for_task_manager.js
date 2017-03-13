@@ -88,6 +88,7 @@ var taskManager = {
 
             var id = $(e.target).data('task-id');
             var currentStatus = $(e.target).data('status');
+            console.log($(e.target).data('status'));
 
             $.ajax({
                 type: 'PUT',
@@ -96,7 +97,6 @@ var taskManager = {
                 url: "http://localhost:3000/tasks/"+id,
                 data: (currentStatus != 1) ? JSON.stringify({'status': 1}) : JSON.stringify ({'status': 0})
             });
-            console.log('status = '+ currentStatus);
         });
         taskManager.rct();
         taskManager.mnc();
@@ -114,7 +114,7 @@ var taskManager = {
             });
 
             taskResult[0].forEach(function(task) {
-                $('ul[data-category-id="'+task.category_id+'"]').append('<li data-task-id="'+task.id+'">'+task.name+'</li>');
+                $('ul[data-category-id="'+task.category_id+'"]').append('<li data-task-id="'+task.id+'" data-status="'+task.status+'">'+task.name+'</li>');
             });
         });
     }
