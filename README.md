@@ -113,4 +113,4 @@ Node.js and Websockets
 ## Week 17 and 18 - 12/12, 12/19
 
 Final Project TBD
-# MNE-LearningPath
+# learning-path
