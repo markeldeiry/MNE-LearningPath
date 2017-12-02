@@ -67,7 +67,7 @@ jQuery and Ajax
 
 ## Week 6 - 10/3
 
-Testing JavaScript
+Testing JavaScript - USE JEST
 
 - Add tests to prior JS game exercise
 - Add tests to task manager project
@@ -113,3 +113,4 @@ Node.js and Websockets
 ## Week 17 and 18 - 12/12, 12/19
 
 Final Project TBD
+# MNE-LearningPath
